@@ -111,7 +111,7 @@ async def answer(bot: Client, query):
         await query.answer(
             results=main,
             switch_pm_text="🔒 Learn How to send Whispers",
-            switch_pm_parameter="start"
+            switch_pm_parameter="secret"
         )
     elif len(query_list) == 1:
         sender = query.from_user.id
@@ -119,7 +119,7 @@ async def answer(bot: Client, query):
         await query.answer(
             results,
             switch_pm_text="🔒 Learn How to send Whispers",
-            switch_pm_parameter="start"
+            switch_pm_parameter="secret"
         )
     elif len(query_list) >= 2:
         mentioned_user = query_list[-1]
@@ -133,7 +133,7 @@ async def answer(bot: Client, query):
             await query.answer(
                 results,
                 switch_pm_text="🔒 Learn How to send Whispers",
-                switch_pm_parameter="start"
+                switch_pm_parameter="secret"
             )
             return
         try:
@@ -168,7 +168,7 @@ async def answer(bot: Client, query):
                     )
                 ],
                 switch_pm_text="🔒 Learn How to send Whispers",
-                switch_pm_parameter="start"
+                switch_pm_parameter="secret"
             )
             await check_for_users(receiver)
         except (UsernameInvalid, UsernameNotOccupied, PeerIdInvalid,  IndexError):
@@ -177,6 +177,6 @@ async def answer(bot: Client, query):
             await query.answer(
                 results,
                 switch_pm_text="🔒 Learn How to send Whispers",
-                switch_pm_parameter="start"
+                switch_pm_parameter="secret"
             )
     await check_for_users(sender)
