@@ -11,11 +11,11 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 app = Client(
-    "Whisper-Bot",
+    "Lovely-Bot",
     api_id=Config.API_ID,
     api_hash=Config.API_HASH,
     bot_token=Config.BOT_TOKEN,
-    plugins=dict(root="WhisperBot"),
+    plugins=dict(root="LovelyBot"),
 )
 
 
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     print(f"@{uname} Started Successfully!")
     idle()
     app.stop()
-    print("Bot stopped. Alvida!")
+    print("Bot stopped. Bye!")
